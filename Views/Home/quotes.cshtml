@@ -1,0 +1,14 @@
+<body>
+    <h1>Hello, welcome to the quotes page!</h1>
+    <form action="/" method="GET">
+        <button> <a href="index.cshtml"></a>Go back to home page.</button>
+    </form>
+    @{
+        @foreach(var quote in ViewBag.users)
+        {
+            <h3>@quote["quote"]</h3>
+            <h5>-@quote["name"] on @quote["created_at"]</h5>
+            <hr>
+        }
+    }
+</body>
